@@ -7,8 +7,17 @@
 
   font-size: 1.6rem;
   font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 :root{
   font-size: 62.5%;
+}
+
+body{
+  background-color: #2d3947;
+  color: #fffffa;
+
+  overflow-x: hidden;
 }
