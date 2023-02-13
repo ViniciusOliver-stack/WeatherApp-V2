@@ -26,3 +26,24 @@ body{
   color: #fffffa;
   scroll-snap-type: y mandatory;
 }
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: transparent;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}

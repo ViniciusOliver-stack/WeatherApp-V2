@@ -94,6 +94,11 @@
 }
 
 /*Section Wrapper Today*/
+#today{
+  margin-top: 6rem;
+
+}
+
 .wrapper-today{
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -104,7 +109,9 @@
   width: 100%;
   grid-auto-flow: column;
   gap: 10px;
-  padding-left: 20px;
+
+  padding-left: 10px;
+  margin-top: 3rem;
 }
 
 .today-hours{
@@ -112,8 +119,31 @@
 
   /* visual styling */
   width: 80px;
-  height: 80px;
   flex-shrink: 0;
-  background: red;
-  border-radius: 20px;
+  margin: 1.6rem 0;
+}
+
+/*Week*/
+.wrapper-week{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.3rem;
+
+  margin-top: 3rem;
+}
+
+.week{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.week p{
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.temp-max{
+  color: #59569D;
 }
