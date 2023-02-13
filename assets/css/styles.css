@@ -96,6 +96,9 @@
 /*Section Wrapper Today*/
 #today{
   margin-top: 6rem;
+}
+
+.today-title{
 
 }
 
@@ -139,11 +142,13 @@
   justify-content: space-between;
 }
 
-.week p{
+.week p,
+.today-title{
   font-size: 1.8rem;
   font-weight: 600;
 }
 
-.temp-max{
+.temp-max,
+.today-title{
   color: #59569D;
 }
