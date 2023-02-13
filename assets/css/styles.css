@@ -1,11 +1,10 @@
 @import url(./reset.css);
 
-
-#container{
+#container {
   max-width: 600px;
   min-width: 320px;
   height: 100vh;
-  
+
   margin: 0 auto;
 
   padding: 1rem 2rem;
@@ -13,32 +12,31 @@
 
 /*Header*/
 
-.wrapper-weather{
+.wrapper-weather {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.header-info{
+.header-info {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-.city{
+.city {
   font-size: 2.6rem;
   font-weight: 600;
   line-height: 3.6rem;
-
 }
 
-.temperature{
+.temperature {
   font-size: 5rem;
   font-weight: 600;
   line-height: 7.5rem;
 }
 
-.climate{
+.climate {
   display: inline-block;
 
   background: #353361;
@@ -49,60 +47,55 @@
 }
 
 /*Header Bottom*/
-.header-bottom{
+.header-bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.weather-info{
+.weather-info {
   display: flex;
   align-items: center;
   gap: 1.3rem;
 }
 
 /*Section Hours*/
-.wrapper-sunrise-sunset{
+.wrapper-sunrise-sunset {
   display: flex;
   justify-content: space-between;
 }
 
-.wrapper-hours{
+.wrapper-hours {
   margin-top: 6rem;
 
   position: relative;
 }
 
 .wrapper-sunrise,
-.wrapper-sunset{
+.wrapper-sunset {
   display: flex;
   align-items: center;
   gap: 1rem;
-
 }
 
 .wrapper-sunrise p,
-.wrapper-sunset p{
+.wrapper-sunset p {
   font-size: 1.2rem;
   font-weight: 600;
 }
 
-.wrapper-sunset{
+.wrapper-sunset {
   position: absolute;
   bottom: 2.6rem;
   right: 0;
 }
 
 /*Section Wrapper Today*/
-#today{
+#today {
   margin-top: 6rem;
 }
 
-.today-title{
-
-}
-
-.wrapper-today{
+.wrapper-today {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-padding-left: 20px;
@@ -117,7 +110,7 @@
   margin-top: 3rem;
 }
 
-.today-hours{
+.today-hours {
   scroll-snap-align: start;
 
   /* visual styling */
@@ -127,7 +120,7 @@
 }
 
 /*Week*/
-.wrapper-week{
+.wrapper-week {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -136,19 +129,19 @@
   margin-top: 3rem;
 }
 
-.week{
+.week {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .week p,
-.today-title{
+.today-title {
   font-size: 1.8rem;
   font-weight: 600;
 }
 
 .temp-max,
-.today-title{
-  color: #59569D;
+.today-title {
+  color: #59569d;
 }
