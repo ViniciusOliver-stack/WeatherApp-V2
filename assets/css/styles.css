@@ -9,74 +9,111 @@
   margin: 0 auto;
 
   padding: 1rem 2rem;
-  border: 1px solid red;
 }
 
-.header{
-  position: relative;
-}
-
-.wrapper-top{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.wrapper-city{
-  margin-top: 3rem;
-
-  text-align: center;
-}
-
-.wrapper-city .city{
-  font-size: 2rem;
-}
-
-.wrapper-city h2{
-  font-size: 10rem;
-  font-weight: 500;
-
-  position: relative;
-}
-
-.wrapper-city h2 span{
-  position: absolute;
-  top: -5px;
-
-  font-size: 3rem;
-}
-
-.wrapper-city .weather{
-  background: rgba(53, 51, 99, .7);
-
-  text-align: center;
-  display: inline-block;
-  padding: .8rem 1.2rem;
-
-  border-radius: 20px;
-}
+/*Header*/
 
 .wrapper-weather{
-  position: absolute;
-  right: -100px;
-  top: 0;
-}
-
-/*Wrapper Bottom*/
-.weather-icon img{
-  width: 32px;
-}
-
-.wrapper-bottom{
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  margin-top: 6rem;
 }
 
-.wrapper-bottom .weather-icon{
+.header-info{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.city{
+  font-size: 2.6rem;
+  font-weight: 600;
+  line-height: 3.6rem;
+
+}
+
+.temperature{
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 7.5rem;
+}
+
+.climate{
+  display: inline-block;
+
+  background: #353361;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+
+  padding: 1rem 1.3rem;
+}
+
+/*Header Bottom*/
+.header-bottom{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.weather-info{
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+}
+
+/*Section Hours*/
+.wrapper-sunrise-sunset{
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper-hours{
+  margin-top: 6rem;
+
+  position: relative;
+}
+
+.wrapper-sunrise,
+.wrapper-sunset{
   display: flex;
   align-items: center;
   gap: 1rem;
+
+}
+
+.wrapper-sunrise p,
+.wrapper-sunset p{
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.wrapper-sunset{
+  position: absolute;
+  bottom: 2.6rem;
+  right: 0;
+}
+
+/*Section Wrapper Today*/
+.wrapper-today{
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 20px;
+
+  /* visual styling */
+  display: grid;
+  width: 100%;
+  grid-auto-flow: column;
+  gap: 10px;
+  padding-left: 20px;
+}
+
+.today-hours{
+  scroll-snap-align: start;
+
+  /* visual styling */
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  background: red;
+  border-radius: 20px;
 }

@@ -9,6 +9,12 @@
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+}
+
+html{
+  scroll-snap-type: y mandatory;
+
 }
 
 :root{
@@ -16,8 +22,7 @@
 }
 
 body{
-  background-color: #2d3947;
+  background-color: #12232E;
   color: #fffffa;
-
-  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
 }

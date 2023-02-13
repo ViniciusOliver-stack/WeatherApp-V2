@@ -8,48 +8,123 @@
   <!--CSS-->
   <link rel="stylesheet" href="./assets/css/styles.css">
   <!--Font Awesome-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <title>Weather App</title>
 </head>
 
 <body>
   <div id="container">
-    <div class="header">
-      <div class="wrapper-top">
-        <div class="wrapper-city">
-          <p class="city">San Francisco</p>
-          <h2>18<span>°</span></h2>
-          <span class="weather">Cloudy</span>
+    <header>
+      <div class="wrapper-weather">
+        <div class="header-info">
+          <h2 class="city">San Francisco</h2>
+          <p class="temperature">24°C</p>
+          <p class="climate">Cloudy</p>
         </div>
-        <div class="wrapper-weather">
+
+        <div class="header-icon">
           <img src="./assets/images/rain.svg" alt="">
         </div>
       </div>
 
-      <div class="wrapper-bottom">
-        <div class="weather-icon">
+      <div class="header-bottom">
+        <div class="weather-info">
           <img src="./assets/images/droplet.svg" alt="">
           <p>13%</p>
         </div>
 
-        <div class="weather-icon">
+        <div class="weather-info">
           <img src="./assets/images/barometer.svg" alt="">
           <p>0.533mBar</p>
         </div>
 
-        <div class="weather-icon">
+        <div class="weather-info">
           <img src="./assets/images/wind.svg" alt="">
           <p>9km/h</p>
         </div>
       </div>
+    </header>
 
-      <div class="bubble">
+    <section>
+      <div class="wrapper-hours">
         
-      </div>
-    </div>
+        <div class="wrapper-sunrise-sunset">
+          <div class="wrapper-sunrise">
+            <img src="./assets/images/sunny.svg" alt="">
+            <p class="sunrise">07:00 AM</p>
+          </div>
+  
+          <div class="wrapper-sunset">
+            <img src="./assets/images/sunset.svg" alt="">
+            <p class="sunset">07:00 PM</p>
+          </div>
+        </div>
 
+        <div class="time-line">
+          <svg width="100%" height="100%" viewBox="0 0 430 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.919604 8.25036C158.92 -25.3275 386.92 84.6725 428.92 54.2504" stroke="white" stroke-width="2" />
+          </svg>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <div class="wrapper-today">
+        <div class="today-hours">
+          <p>10 AM</p>
+          <img src="./assets/images/partly-cloud.svg" alt="">
+          <p>12°</p>
+        </div>
+
+        <div class="today-hours">
+          <p>10 AM</p>
+          <img src="./assets/images/partly-cloud.svg" alt="">
+          <p>12°</p>
+        </div>
+
+        <div class="today-hours">
+          <p>10 AM</p>
+          <img src="./assets/images/partly-cloud.svg" alt="">
+          <p>12°</p>
+        </div>
+
+        <div class="today-hours">
+          <p>10 AM</p>
+          <img src="./assets/images/partly-cloud.svg" alt="">
+          <p>12°</p>
+        </div>
+
+        <div class="today-hours">
+          <p>10 AM</p>
+          <img src="./assets/images/partly-cloud.svg" alt="">
+          <p>12°</p>
+        </div>
+
+        <div class="today-hours">
+          <p>10 AM</p>
+          <img src="./assets/images/partly-cloud.svg" alt="">
+          <p>12°</p>
+        </div>
+
+        <div class="today-hours">
+          <p>10 AM</p>
+          <img src="./assets/images/partly-cloud.svg" alt="">
+          <p>12°</p>
+        </div>
+
+        <div class="today-hours">
+          <p>10 AM</p>
+          <img src="./assets/images/partly-cloud.svg" alt="">
+          <p>12°</p>
+        </div>
+      </div>
+    </section>
   </div>
+
 
 </body>
 
