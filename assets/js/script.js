@@ -12,18 +12,10 @@ btnSubmitCity.addEventListener('click', () => {
   fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${nameCity}&units=metric&lang=pt_br&appid=${APIKey}`
   )
-  .then(data => data.json()) //O dado que recebem é em JSON
+  .then(data => data.json())
   .then(resp => {
-    try {
-      console.log(resp)
-      city.textContent = resp.name
-      temperature.textContent = `${Number(resp.main.temp).toFixed(0)}°C`
-    } catch {
-      resp.message = 'Cidade não localizada'
-      city.textContent = resp.message
-      return
-    }
-  }) 
+    console.log(resp)
+  })
 })
 
 
