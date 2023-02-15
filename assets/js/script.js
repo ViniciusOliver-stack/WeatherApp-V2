@@ -12,11 +12,14 @@ btnSubmitCity.addEventListener('click', () => {
   fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${nameCity}&units=metric&lang=pt_br&appid=${APIKey}`
   )
-  .then(data => data.json())
-  .then(resp => {
-    console.log(resp)
-  })
-})
+    .then(data => data.json())
+    .then(resp => {
+      console.log(resp)
 
+      city.textContent = `${resp.name}`
+      temperature.textContent = `${resp.main.temp}°C`
+      climate.textContent = `${resp.weather[0].description}`
+    })
+})
 
 //Extrair a informação
