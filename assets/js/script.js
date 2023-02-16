@@ -12,6 +12,34 @@ const sunset = document.querySelector('.sunset')
 
 const btnSubmitCity = document.querySelector('.submitCity')
 
+
+const navMenu = document.querySelector('#nav-menu')
+const navToggle = document.querySelector('#nav-toggle')
+const navClose = document.querySelector('#nav-close')
+
+if (navToggle) {
+  navToggle.addEventListener('click', () => {
+    navMenu.classList.add('show-menu')
+  })
+}
+
+if (navClose) {
+  navClose.addEventListener('click', () => {
+    navMenu.classList.remove('show-menu')
+  })
+}
+
+/*Remove menu mobile*/
+const navLink = document.querySelectorAll('.nav-link')
+
+function actionLink() {
+  const navMenu = document.querySelector('.nav-menu')
+
+  navMenu.classList.remove('show-menu')
+}
+
+navLink.forEach(n => n.addEventListener('click', actionLink))
+
 btnSubmitCity.addEventListener('click', async () => {
   const nameCity = document.querySelector('#nameCity').value
 
