@@ -15,9 +15,9 @@ const btnSubmitCity = document.querySelector('.submitCity')
 btnSubmitCity.addEventListener('click', async () => {
   const nameCity = document.querySelector('#nameCity').value
 
-  function converterParaHora(segundos){
-    function duasCasas(numero){
-      if(numero <= 9){
+  function converterParaHora(segundos) {
+    function duasCasas(numero) {
+      if (numero <= 9) {
         numero = '0' + numero
       }
       return numero
@@ -29,7 +29,7 @@ btnSubmitCity.addEventListener('click', async () => {
     return horas
   }
 
-  function converterParaInteiro(value){
+  function converterParaInteiro(value) {
     value = parseInt(value)
 
     return value
@@ -42,13 +42,12 @@ btnSubmitCity.addEventListener('click', async () => {
     .then(resp => {
       console.log(resp)
       city.textContent = `${resp.name}`
-      temperature.textContent = converterParaInteiro(resp.main.temp) +  `°C`
+      temperature.textContent = converterParaInteiro(resp.main.temp) + `°C`
       humidity.textContent = `${resp.main.humidity}%`
-      pressure.textContent = `${resp.main.pressure}hPa`
+      pressure.textContent = `${resp.main.pressure}mBar`
       windSpeed.textContent = `${resp.wind.speed}km/h`
       climate.textContent = `${resp.weather[0].description}`
 
-     
       const sunriseHours = converterParaHora(resp.sys.sunrise)
       const sunsetHours = converterParaHora(resp.sys.sunset)
       climate.textContent = `${resp.weather[0].description}`
@@ -62,7 +61,6 @@ btnSubmitCity.addEventListener('click', async () => {
   )
     .then(data => data.json())
     .then(resp => {
-      
       resp.list.map(test => {
         console.log(resp)
         // Buscar elemento pai
@@ -71,6 +69,33 @@ btnSubmitCity.addEventListener('click', async () => {
         var today_hours = document.createElement('div')
         var p1 = document.createElement('p')
         var p = document.createElement('p')
+        var img = document.createElement('img')
+
+        switch (test.weather[0].main) {
+          case 'Clear':
+            img.src = '../../assets/images/cloudy-clear.svg'
+            break
+          case 'Rain':
+            img.src = '../../assets/images/rain.svg'
+            break
+          case 'Snow':
+            img.src = '../../assets/images/snow.svg'
+            break
+          case 'Clouds':
+            img.src = '../../assets/images/cloudy.svg'
+            break
+          case 'Thunderstorm':
+            img.src = '../../assets/images/sever-thunderstorm.svg'
+            break
+          case 'Drizzle':
+            img.src = '../../assets/images/drizzle.svg'
+            break
+          case 'Fog':
+            img.src = '../../assets/images/fog.svg'
+          default:
+            img.src = '../../assets/images/partly-cloud.svg'
+            break
+        }
 
         // Criando o nó de texto de outra forma
         p.textContent = `${converterParaInteiro(test.main.temp)} °C`
@@ -79,6 +104,7 @@ btnSubmitCity.addEventListener('click', async () => {
 
         // Inserir (anexar) o elemento filho (p) ao elemento pai (body)
         today_hours.appendChild(p1)
+        today_hours.appendChild(img)
         today_hours.appendChild(p)
         elemento_pai.appendChild(today_hours)
       })
