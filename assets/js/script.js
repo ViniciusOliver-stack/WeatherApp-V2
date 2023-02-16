@@ -16,7 +16,7 @@ btnSubmitCity.addEventListener('click', () => {
   const nameCity = document.querySelector('#nameCity').value
 
   fetch(
-    `https://api.openweathermap.org/data/2.5/weather?q=${nameCity}&units=metric&lang=pt_br&appid=${APIKey}`
+    `https://api.openweathermap.org/data/2.5/weather?q=${nameCity}&units=metric&lang=pt_br&cnt=7&appid=${APIKey}`
   )
   .then(data => data.json())
   .then(resp => {
@@ -30,19 +30,12 @@ btnSubmitCity.addEventListener('click', () => {
     .then(data => data.json())
     .then(resp => {
       console.log(resp)
-      const sunriseDate = new Date(resp.sys.sunrise * 1000)
-      const sunriseHours = sunriseDate.getHours().toFixed(2).replace('.', ':')
-
-      const sunsetDate = new Date(resp.sys.sunset * 1000)
-      const sunsetHours = sunsetDate.getHours().toFixed(2).replace('.', ':')
 
       city.textContent = `${resp.name}`
       temperature.textContent = `${resp.main.temp}°C`
-      climate.textContent = `${resp.weather[0].description}`
-
-      sunrise.textContent = `0${sunriseHours} AM`
-      sunset.textContent = `${sunsetHours} PM`
     })
+
+    
 })
 
 //Extrair a informação
