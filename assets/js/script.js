@@ -26,6 +26,8 @@ btnSubmitCity.addEventListener('click', () => {
     humidity.textContent = `${resp.main.humidity}%`
     pressure.textContent = `${resp.main.pressure}hPa`
     windSpeed.textContent = `${resp.wind.speed}km/h`
+    climate.textContent = `${resp.weather[0].description}`
+    
     
     const sunriseDate = new Date(resp.sys.sunrise * 1000)
     const sunriseHours = sunriseDate.getHours().toFixed(2).replace('.', ':')
