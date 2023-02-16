@@ -3,6 +3,9 @@ const APIKey = '33ce53fdc7f487e48f74035dd67eeb33'
 const city = document.querySelector('.city')
 const temperature = document.querySelector('.temperature')
 const climate = document.querySelector('.climate')
+const humidity =document.querySelector('.humidity')
+const pressure = document.querySelector('.pressure')
+const windSpeed = document.querySelector('.wind-speed')
 
 const btnSubmitCity = document.querySelector('.submitCity')
 
@@ -14,7 +17,12 @@ btnSubmitCity.addEventListener('click', () => {
   )
   .then(data => data.json())
   .then(resp => {
-    console.log(resp)
+    console.log(resp);
+  city.textContent = `${resp.name}`
+  temperature.textContent = parseInt(`${resp.main.temp}`).toFixed(0)+`°C`
+  humidity.textContent = `${resp.main.humidity}%`
+  pressure.textContent = `${resp.main.pressure}hPa`
+  windSpeed.textContent = `${resp.wind.speed}km/h`
   })
 })
 
