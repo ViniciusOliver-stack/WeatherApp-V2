@@ -3,7 +3,7 @@ const APIKey = '33ce53fdc7f487e48f74035dd67eeb33'
 const city = document.querySelector('.city')
 const temperature = document.querySelector('.temperature')
 const climate = document.querySelector('.climate')
-const humidity =document.querySelector('.humidity')
+const humidity = document.querySelector('.humidity')
 const pressure = document.querySelector('.pressure')
 const windSpeed = document.querySelector('.wind-speed')
 
@@ -12,31 +12,75 @@ const sunset = document.querySelector('.sunset')
 
 const btnSubmitCity = document.querySelector('.submitCity')
 
-btnSubmitCity.addEventListener('click', () => {
+btnSubmitCity.addEventListener('click', async () => {
   const nameCity = document.querySelector('#nameCity').value
 
-  fetch(
-    `https://api.openweathermap.org/data/2.5/weather?q=${nameCity}&units=metric&lang=pt_br&cnt=7&appid=${APIKey}`
+  function converterParaHora(segundos){
+    function duasCasas(numero){
+      if(numero <= 9){
+        numero = '0' + numero
+      }
+      return numero
+    }
+
+    const date = duasCasas(new Date(segundos * 1000))
+    const horas = date.getHours().toFixed(2).replace('.', ':')
+
+    return horas
+  }
+
+  function converterParaInteiro(value){
+    value = parseInt(value)
+
+    return value
+  }
+
+  await fetch(
+    `https://api.openweathermap.org/data/2.5/weather?q=${nameCity}&units=metric&lang=pt_br&appid=${APIKey}`
   )
-  .then(data => data.json())
-  .then(resp => {
-    console.log(resp);
-    city.textContent = `${resp.name}`
-    temperature.textContent = parseInt(`${resp.main.temp}`).toFixed(0)+`°C`
-    humidity.textContent = `${resp.main.humidity}%`
-    pressure.textContent = `${resp.main.pressure}hPa`
-    windSpeed.textContent = `${resp.wind.speed}km/h`
-    climate.textContent = `${resp.weather[0].description}`
-    
-    
-    const sunriseDate = new Date(resp.sys.sunrise * 1000)
-    const sunriseHours = sunriseDate.getHours().toFixed(2).replace('.', ':')
-  
-    const sunsetDate = new Date(resp.sys.sunset * 1000)
-    const sunsetHours = sunsetDate.getHours().toFixed(2).replace('.', ':')
-    climate.textContent = `${resp.weather[0].description}`
-  
-    sunrise.textContent = `0${sunriseHours} AM`
-    sunset.textContent = `${sunsetHours} PM`
-  })
+    .then(data => data.json())
+    .then(resp => {
+      console.log(resp)
+      city.textContent = `${resp.name}`
+      temperature.textContent = converterParaInteiro(resp.main.temp) +  `°C`
+      humidity.textContent = `${resp.main.humidity}%`
+      pressure.textContent = `${resp.main.pressure}hPa`
+      windSpeed.textContent = `${resp.wind.speed}km/h`
+      climate.textContent = `${resp.weather[0].description}`
+
+     
+      const sunriseHours = converterParaHora(resp.sys.sunrise)
+      const sunsetHours = converterParaHora(resp.sys.sunset)
+      climate.textContent = `${resp.weather[0].description}`
+
+      sunrise.textContent = `0${sunriseHours} AM`
+      sunset.textContent = `${sunsetHours} PM`
+    })
+
+  await fetch(
+    `https://api.openweathermap.org/data/2.5/forecast?q=${nameCity}&units=metric&cnt=8&lang=pt_br&appid=${APIKey}`
+  )
+    .then(data => data.json())
+    .then(resp => {
+      
+      resp.list.map(test => {
+        console.log(resp)
+        // Buscar elemento pai
+        var elemento_pai = document.querySelector('.wrapper-today')
+        // Criar elemento
+        var today_hours = document.createElement('div')
+        var p1 = document.createElement('p')
+        var p = document.createElement('p')
+
+        // Criando o nó de texto de outra forma
+        p.textContent = `${converterParaInteiro(test.main.temp)} °C`
+        p1.textContent = `${converterParaHora(test.dt)}`
+        today_hours.classList.add('today-hours')
+
+        // Inserir (anexar) o elemento filho (p) ao elemento pai (body)
+        today_hours.appendChild(p1)
+        today_hours.appendChild(p)
+        elemento_pai.appendChild(today_hours)
+      })
+    })
 })
