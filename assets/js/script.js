@@ -7,6 +7,9 @@ const humidity =document.querySelector('.humidity')
 const pressure = document.querySelector('.pressure')
 const windSpeed = document.querySelector('.wind-speed')
 
+const sunrise = document.querySelector('.sunrise')
+const sunset = document.querySelector('.sunset')
+
 const btnSubmitCity = document.querySelector('.submitCity')
 
 btnSubmitCity.addEventListener('click', () => {
@@ -24,7 +27,22 @@ btnSubmitCity.addEventListener('click', () => {
   pressure.textContent = `${resp.main.pressure}hPa`
   windSpeed.textContent = `${resp.wind.speed}km/h`
   })
-})
+    .then(data => data.json())
+    .then(resp => {
+      console.log(resp)
+      const sunriseDate = new Date(resp.sys.sunrise * 1000)
+      const sunriseHours = sunriseDate.getHours().toFixed(2).replace('.', ':')
 
+      const sunsetDate = new Date(resp.sys.sunset * 1000)
+      const sunsetHours = sunsetDate.getHours().toFixed(2).replace('.', ':')
+
+      city.textContent = `${resp.name}`
+      temperature.textContent = `${resp.main.temp}°C`
+      climate.textContent = `${resp.weather[0].description}`
+
+      sunrise.textContent = `0${sunriseHours} AM`
+      sunset.textContent = `${sunsetHours} PM`
+    })
+})
 
 //Extrair a informação
