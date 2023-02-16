@@ -21,22 +21,20 @@ btnSubmitCity.addEventListener('click', () => {
   .then(data => data.json())
   .then(resp => {
     console.log(resp);
-  city.textContent = `${resp.name}`
-  temperature.textContent = parseInt(`${resp.main.temp}`).toFixed(0)+`°C`
-  humidity.textContent = `${resp.main.humidity}%`
-  pressure.textContent = `${resp.main.pressure}hPa`
-  windSpeed.textContent = `${resp.wind.speed}km/h`
-  
-  const sunriseDate = new Date(resp.sys.sunrise * 1000)
-  const sunriseHours = sunriseDate.getHours().toFixed(2).replace('.', ':')
-
-  const sunsetDate = new Date(resp.sys.sunset * 1000)
-  const sunsetHours = sunsetDate.getHours().toFixed(2).replace('.', ':')
-  climate.textContent = `${resp.weather[0].description}`
-
-  sunrise.textContent = `0${sunriseHours} AM`
-  sunset.textContent = `${sunsetHours} PM`
+    city.textContent = `${resp.name}`
+    temperature.textContent = parseInt(`${resp.main.temp}`).toFixed(0)+`°C`
+    humidity.textContent = `${resp.main.humidity}%`
+    pressure.textContent = `${resp.main.pressure}hPa`
+    windSpeed.textContent = `${resp.wind.speed}km/h`
     
+    const sunriseDate = new Date(resp.sys.sunrise * 1000)
+    const sunriseHours = sunriseDate.getHours().toFixed(2).replace('.', ':')
+  
+    const sunsetDate = new Date(resp.sys.sunset * 1000)
+    const sunsetHours = sunsetDate.getHours().toFixed(2).replace('.', ':')
+    climate.textContent = `${resp.weather[0].description}`
+  
+    sunrise.textContent = `0${sunriseHours} AM`
+    sunset.textContent = `${sunsetHours} PM`
+  })
 })
-}
-//Extrair a informação
