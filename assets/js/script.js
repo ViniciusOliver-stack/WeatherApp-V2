@@ -152,6 +152,17 @@ btnSubmitCity.addEventListener('click', async () => {
       }
 
       console.log(resp)
+
+      for(i = 0; i < 4; i++) {
+
+        document.getElementById('temp' + (i + 1)).innerHTML =
+        Number(resp.list[i].main.temp).toFixed(0) + '°'
+      }
+      for(i = 0; i < 4; i++) {
+
+        document.getElementById('ampm' + (i + 1)).innerHTML =
+        `${converterParaHora(resp.list[i].dt)}`
+      }
     })
 })
 
