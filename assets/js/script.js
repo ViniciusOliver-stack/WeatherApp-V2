@@ -116,30 +116,6 @@ btnSubmitCity.addEventListener('click', async () => {
   )
     .then(data => data.json())
     .then(resp => {
-      // resp.list.map(test => {
-      //   console.log(resp)
-      //   // Buscar elemento pai
-      //   var elemento_pai = document.querySelector('.wrapper-today')
-      //   // Criar elemento
-      //   var today_hours = document.createElement('div')
-      //   var p1 = document.createElement('p')
-      //   var p = document.createElement('p')
-      //   var img = document.createElement('img')
-
-      //   }
-
-      //   // Criando o nó de texto de outra forma
-      //   p.textContent = `${converterParaInteiro(test.main.temp)} °C`
-      //   p1.textContent = `${converterParaHora(test.dt)}`
-      //   today_hours.classList.add('today-hours')
-
-      //   // Inserir (anexar) o elemento filho (p) ao elemento pai (body)
-      //   today_hours.appendChild(p1)
-      //   today_hours.appendChild(img)
-      //   today_hours.appendChild(p)
-      //   elemento_pai.appendChild(today_hours)
-      // })
-
       //Getting the min and max values for each day
       for (i = 0; i < 7; i++) {
         document.getElementById('day' + (i + 1) + 'Min').innerHTML =
@@ -153,15 +129,14 @@ btnSubmitCity.addEventListener('click', async () => {
 
       console.log(resp)
 
-      for(i = 0; i < 4; i++) {
-
+      for (i = 0; i < 4; i++) {
         document.getElementById('temp' + (i + 1)).innerHTML =
-        Number(resp.list[i].main.temp).toFixed(0) + '°'
+          Number(resp.list[i].main.temp).toFixed(0) + '°'
       }
-      for(i = 0; i < 4; i++) {
-
-        document.getElementById('ampm' + (i + 1)).innerHTML =
-        `${converterParaHora(resp.list[i].dt)}`
+      for (i = 0; i < 4; i++) {
+        document.getElementById(
+          'ampm' + (i + 1)
+        ).innerHTML = `${converterParaHora(resp.list[i].dt)}`
       }
     })
 })
