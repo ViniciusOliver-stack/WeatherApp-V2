@@ -1,220 +1,205 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--CSS-->
-    <link rel="stylesheet" href="./assets/css/styles.css" />
-    <!--Font Awesome-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--Unicons-->
-    <link
-      rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
-    />
+  <!--CSS-->
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+  <!--Font Awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <title>Weather App</title>
-  </head>
+  <!--Unicons-->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
 
-  <body>
-    <label for="city">
-      <input type="text" id="nameCity" />
-      <button class="submitCity">Pesquisar cidade</button>
-    </label>
+  <title>Weather App</title>
+</head>
 
-    <div id="container">
-      <header>
-        <div class="wrapper-weather">
-          <div class="header-info">
-            <h2 class="city">San Francisco</h2>
-            <p class="temperature">24°C</p>
-            <p class="climate">Cloudy</p>
-          </div>
+<body>
+  <label for="city">
+    <input type="text" id="nameCity" />
+    <button class="submitCity">Pesquisar cidade</button>
+  </label>
 
-          <div class="header-icon">
-            <img id="img" src="./assets/images/Icons Set/sun.svg" alt="" />
-          </div>
+  <div id="container">
+    <header>
+      <div class="wrapper-weather">
+        <div class="header-info">
+          <h2 class="city">San Francisco</h2>
+          <p class="temperature">24°C</p>
+          <p class="climate">Cloudy</p>
         </div>
 
-        <div class="header-bottom">
-          <div class="weather-info">
-            <img src="./assets/images/droplet.svg" alt="" />
-            <p class="humidity">13%</p>
-          </div>
-
-          <div class="weather-info">
-            <img src="./assets/images/barometer.svg" alt="" />
-            <p class="pressure">0.533mBar</p>
-          </div>
-
-          <div class="weather-info">
-            <img src="./assets/images/wind.svg" alt="" />
-            <p class="wind-speed">9km/h</p>
-          </div>
+        <div class="header-icon">
+          <img id="img" src="./assets/images/Icons Set/sun.svg" alt="" />
         </div>
-      </header>
-
-      <div class="header" id="header">
-        <nav class="nav container">
-          <div class="nav-menu" id="nav-menu">
-            <ul class="nav-list grid">
-              <li class="nav-item">
-                <a href="#" class="nav-link active-link">
-                  <i class="uil uil-estate"></i> Home
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="uil uil-search"></i> Search
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="uil uil-user-location"></i> Location
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="uil uil-heart"></i> Fav
-                </a>
-              </li>
-            </ul>
-
-            <i class="uil uil-times nav-close" id="nav-close"></i>
-          </div>
-
-          <div class="nav-btns">
-            <div class="nav-toggle" id="nav-toggle">
-              <i class="uil uil-apps"></i>
-            </div>
-          </div>
-        </nav>
       </div>
 
-      <section>
-        <div class="wrapper-hours">
-          <div class="wrapper-sunrise-sunset">
-            <div class="wrapper-sunrise">
-              <img src="./assets/images/sunny.svg" alt="" />
-              <p class="sunrise">07:00 AM</p>
-            </div>
+      <div class="header-bottom">
+        <div class="weather-info">
+          <img src="./assets/images/droplet.svg" alt="" />
+          <p class="humidity">13%</p>
+        </div>
 
-            <div class="wrapper-sunset">
-              <img src="./assets/images/sunset.svg" alt="" />
-              <p class="sunset">07:00 PM</p>
-            </div>
-          </div>
+        <div class="weather-info">
+          <img src="./assets/images/barometer.svg" alt="" />
+          <p class="pressure">0.533mBar</p>
+        </div>
 
-          <div class="time-line">
-            <svg
-              width="100%"
-              height="100%"
-              viewBox="0 0 430 62"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0.919604 8.25036C158.92 -25.3275 386.92 84.6725 428.92 54.2504"
-                stroke="white"
-                stroke-width="2"
-              />
-            </svg>
+        <div class="weather-info">
+          <img src="./assets/images/wind.svg" alt="" />
+          <p class="wind-speed">9km/h</p>
+        </div>
+      </div>
+    </header>
+
+    <div class="header" id="header">
+      <nav class="nav container">
+        <div class="nav-menu" id="nav-menu">
+          <ul class="nav-list grid">
+            <li class="nav-item">
+              <a href="#" class="nav-link active-link">
+                <i class="uil uil-estate"></i> Home
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="uil uil-search"></i> Search
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="uil uil-user-location"></i> Location
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="uil uil-heart"></i> Fav
+              </a>
+            </li>
+          </ul>
+
+          <i class="uil uil-times nav-close" id="nav-close"></i>
+        </div>
+
+        <div class="nav-btns">
+          <div class="nav-toggle" id="nav-toggle">
+            <i class="uil uil-apps"></i>
           </div>
         </div>
-      </section>
-
-      <section id="today">
-        <p class="today-title">Today</p>
-        <div class="wrapper-today"></div>
-        <section class="today-section">
-          <div class="today-hour">
-            <p class="today-ampm">10 AM</p>
-            <img class="today-img" src="assets/images/fog.svg" alt="" />
-            <p class="today-temp">12°</p>
-          </div>
-          <div class="today-hour">
-            <p class="today-ampm">10 am</p>
-            <img class="today-img" src="assets/images/hail.svg" alt="" />
-            <p class="today-temp">12°</p>
-          </div>
-          <div class="today-hour">
-            <p class="today-ampm">10 am</p>
-            <img class="today-img" src="assets/images/drizzle.svg" alt="" />
-            <p class="today-temp">12°</p>
-          </div>
-          <div class="today-hour">
-            <p class="today-ampm">10 am</p>
-            <img class="today-img" src="assets/images/cloudy.svg" alt="" />
-            <p class="today-temp">12°</p>
-          </div>
-        </section>
-
-        <div class="wrapper-week">
-          <!--Domingo-->
-          <div class="week">
-            <p id="day1"></p>
-            <img src="./assets/images/sleet.svg" alt="" />
-            <p class="temp-min" id="day1Min">12°</p>
-            <p class="temp-max" id="day1Max">12°</p>
-          </div>
-          <!--Segunda-->
-          <div class="week">
-            <p id="day2"></p>
-            <img src="./assets/images/sleet.svg" alt="" />
-            <p class="temp-min" id="day2Min">12°</p>
-            <p class="temp-max" id="day2Max">12°</p>
-          </div>
-          <!--Terça-->
-          <div class="week">
-            <p id="day3"></p>
-            <img src="./assets/images/sleet.svg" alt="" />
-            <p class="temp-min" id="day3Min">12°</p>
-            <p class="temp-max" id="day3Max">12°</p>
-          </div>
-          <!--Quarta-->
-          <div class="week">
-            <p id="day4"></p>
-            <img src="./assets/images/sleet.svg" alt="" />
-            <p class="temp-min" id="day4Min">12°</p>
-            <p class="temp-max" id="day4Max">12°</p>
-          </div>
-          <!--Quinta-->
-          <div class="week">
-            <p id="day5"></p>
-            <img src="./assets/images/sleet.svg" alt="" />
-            <p class="temp-min" id="day5Min">12°</p>
-            <p class="temp-max" id="day5Max">12°</p>
-          </div>
-          <!--Sexta-->
-          <div class="week">
-            <p id="day6"></p>
-            <img src="./assets/images/sleet.svg" alt="" />
-            <p class="temp-min" id="day6Min">12°</p>
-            <p class="temp-max" id="day6Max">12°</p>
-          </div>
-
-          <!--Sábado-->
-          <div class="week">
-            <p id="day7"></p>
-            <img src="./assets/images/sleet.svg" alt="" />
-            <p class="temp-min" id="day7Min">12°</p>
-            <p class="temp-max" id="day7Max">12°</p>
-          </div>
-        </div>
-      </section>
+      </nav>
     </div>
 
-    <script src="./assets/js/script.js"></script>
-  </body>
+    <section>
+      <div class="wrapper-hours">
+        <div class="wrapper-sunrise-sunset">
+          <div class="wrapper-sunrise">
+            <img src="./assets/images/sunny.svg" alt="" />
+            <p class="sunrise">07:00 AM</p>
+          </div>
+
+          <div class="wrapper-sunset">
+            <img src="./assets/images/sunset.svg" alt="" />
+            <p class="sunset">07:00 PM</p>
+          </div>
+        </div>
+
+        <div class="time-line">
+          <svg width="100%" height="100%" viewBox="0 0 430 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.919604 8.25036C158.92 -25.3275 386.92 84.6725 428.92 54.2504" stroke="white" stroke-width="2" />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section id="today">
+      <p class="today-title">Today</p>
+      <div class="wrapper-today"></div>
+      <section class="today-section">
+        <div class="today-hour">
+          <p class="today-ampm" id="ampm1">10 AM</p>
+          <img class="today-img" src="assets/images/fog.svg" alt="" />
+          <p class="today-temp" id="temp1">12°</p>
+        </div>
+        <div class="today-hour">
+          <p class="today-ampm" id="ampm2">10 am</p>
+          <img class="today-img" src="assets/images/hail.svg" alt="" />
+          <p class="today-temp" id="temp2">12°</p>
+        </div>
+        <div class="today-hour">
+          <p class="today-ampm" id="ampm3">10 am</p>
+          <img class="today-img" src="assets/images/drizzle.svg" alt="" />
+          <p class="today-temp" id="temp3">12°</p>
+        </div>
+        <div class="today-hour">
+          <p class="today-ampm" id="ampm4">10 am</p>
+          <img class="today-img" src="assets/images/cloudy.svg" alt="" />
+          <p class="today-temp" id="temp4">12°</p>
+        </div>
+      </section>
+
+      <div class="wrapper-week">
+        <!--Domingo-->
+        <div class="week">
+          <p id="day1"></p>
+          <img src="./assets/images/sleet.svg" alt="" />
+          <p class="temp-min" id="day1Min">12°</p>
+          <p class="temp-max" id="day1Max">12°</p>
+        </div>
+        <!--Segunda-->
+        <div class="week">
+          <p id="day2"></p>
+          <img src="./assets/images/sleet.svg" alt="" />
+          <p class="temp-min" id="day2Min">12°</p>
+          <p class="temp-max" id="day2Max">12°</p>
+        </div>
+        <!--Terça-->
+        <div class="week">
+          <p id="day3"></p>
+          <img src="./assets/images/sleet.svg" alt="" />
+          <p class="temp-min" id="day3Min">12°</p>
+          <p class="temp-max" id="day3Max">12°</p>
+        </div>
+        <!--Quarta-->
+        <div class="week">
+          <p id="day4"></p>
+          <img src="./assets/images/sleet.svg" alt="" />
+          <p class="temp-min" id="day4Min">12°</p>
+          <p class="temp-max" id="day4Max">12°</p>
+        </div>
+        <!--Quinta-->
+        <div class="week">
+          <p id="day5"></p>
+          <img src="./assets/images/sleet.svg" alt="" />
+          <p class="temp-min" id="day5Min">12°</p>
+          <p class="temp-max" id="day5Max">12°</p>
+        </div>
+        <!--Sexta-->
+        <div class="week">
+          <p id="day6"></p>
+          <img src="./assets/images/sleet.svg" alt="" />
+          <p class="temp-min" id="day6Min">12°</p>
+          <p class="temp-max" id="day6Max">12°</p>
+        </div>
+
+        <!--Sábado-->
+        <div class="week">
+          <p id="day7"></p>
+          <img src="./assets/images/sleet.svg" alt="" />
+          <p class="temp-min" id="day7Min">12°</p>
+          <p class="temp-max" id="day7Max">12°</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="./assets/js/script.js"></script>
+</body>
+
 </html>
