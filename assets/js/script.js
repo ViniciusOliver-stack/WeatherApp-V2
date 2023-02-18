@@ -12,7 +12,6 @@ const sunset = document.querySelector('.sunset')
 
 const btnSubmitCity = document.querySelector('.submitCity')
 
-
 const navMenu = document.querySelector('#nav-menu')
 const navToggle = document.querySelector('#nav-toggle')
 const navClose = document.querySelector('#nav-close')
@@ -62,7 +61,7 @@ btnSubmitCity.addEventListener('click', async () => {
 
     return value
   }
-
+  //Get data all application
   await fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${nameCity}&units=metric&lang=pt_br&appid=${APIKey}`
   )
@@ -78,63 +77,105 @@ btnSubmitCity.addEventListener('click', async () => {
 
       const sunriseHours = converterParaHora(resp.sys.sunrise)
       const sunsetHours = converterParaHora(resp.sys.sunset)
-      climate.textContent = `${resp.weather[0].description}`
 
       sunrise.textContent = `0${sunriseHours} AM`
       sunset.textContent = `${sunsetHours} PM`
+
+      const imgHeader = document.querySelector('#img')
+
+      switch (resp.weather[0].main) {
+        case 'Clear':
+          imgHeader.src = '../../assets/images/Icons Set/sun.svg'
+          break
+        case 'Rain':
+          imgHeader.src = '../../assets/images/Icons Set/rain.svg'
+          break
+        case 'Snow':
+          imgHeader.src = '../../assets/images/Icons Set/heavy-snowfall.svg'
+          break
+        case 'Clouds':
+          imgHeader.src = '../../assets/images/Icons Set/cloud.svg'
+          break
+        case 'Thunderstorm':
+          imgHeader.src = '../../assets/images/Icons Set/thunderstrom.svg'
+          break
+        case 'Drizzle':
+          imgHeader.src = '../../assets/images/Icons Set/drizzle.svg'
+          break
+        case 'Fog':
+          imgHeader.src = '../../assets/images/Icons Set/mostly-cloud.svg'
+        default:
+          imgHeader.src = '../../assets/images/Icons Set/mostly-cloud.svg'
+          break
+      }
     })
 
+  //Get hours 3 hours
   await fetch(
     `https://api.openweathermap.org/data/2.5/forecast?q=${nameCity}&units=metric&cnt=8&lang=pt_br&appid=${APIKey}`
   )
     .then(data => data.json())
     .then(resp => {
-      resp.list.map(test => {
-        console.log(resp)
-        // Buscar elemento pai
-        var elemento_pai = document.querySelector('.wrapper-today')
-        // Criar elemento
-        var today_hours = document.createElement('div')
-        var p1 = document.createElement('p')
-        var p = document.createElement('p')
-        var img = document.createElement('img')
+      // resp.list.map(test => {
+      //   console.log(resp)
+      //   // Buscar elemento pai
+      //   var elemento_pai = document.querySelector('.wrapper-today')
+      //   // Criar elemento
+      //   var today_hours = document.createElement('div')
+      //   var p1 = document.createElement('p')
+      //   var p = document.createElement('p')
+      //   var img = document.createElement('img')
 
-        switch (test.weather[0].main) {
-          case 'Clear':
-            img.src = '../../assets/images/cloudy-clear.svg'
-            break
-          case 'Rain':
-            img.src = '../../assets/images/rain.svg'
-            break
-          case 'Snow':
-            img.src = '../../assets/images/snow.svg'
-            break
-          case 'Clouds':
-            img.src = '../../assets/images/cloudy.svg'
-            break
-          case 'Thunderstorm':
-            img.src = '../../assets/images/sever-thunderstorm.svg'
-            break
-          case 'Drizzle':
-            img.src = '../../assets/images/drizzle.svg'
-            break
-          case 'Fog':
-            img.src = '../../assets/images/fog.svg'
-          default:
-            img.src = '../../assets/images/partly-cloud.svg'
-            break
-        }
+      //   }
 
-        // Criando o nó de texto de outra forma
-        p.textContent = `${converterParaInteiro(test.main.temp)} °C`
-        p1.textContent = `${converterParaHora(test.dt)}`
-        today_hours.classList.add('today-hours')
+      //   // Criando o nó de texto de outra forma
+      //   p.textContent = `${converterParaInteiro(test.main.temp)} °C`
+      //   p1.textContent = `${converterParaHora(test.dt)}`
+      //   today_hours.classList.add('today-hours')
 
-        // Inserir (anexar) o elemento filho (p) ao elemento pai (body)
-        today_hours.appendChild(p1)
-        today_hours.appendChild(img)
-        today_hours.appendChild(p)
-        elemento_pai.appendChild(today_hours)
-      })
+      //   // Inserir (anexar) o elemento filho (p) ao elemento pai (body)
+      //   today_hours.appendChild(p1)
+      //   today_hours.appendChild(img)
+      //   today_hours.appendChild(p)
+      //   elemento_pai.appendChild(today_hours)
+      // })
+
+      //Getting the min and max values for each day
+      for (i = 0; i < 7; i++) {
+        document.getElementById('day' + (i + 1) + 'Min').innerHTML =
+          Number(resp.list[i].main.temp_min).toFixed(0) + '°'
+      }
+
+      for (i = 0; i < 7; i++) {
+        document.getElementById('day' + (i + 1) + 'Max').innerHTML =
+          Number(resp.list[i].main.temp_max).toFixed(0) + '°'
+      }
+
+      console.log(resp)
     })
 })
+
+//Getting and displaying the text for the upcoming five days of the week
+var d = new Date()
+var weekday = [
+  'Sunday',
+  'Monday',
+  'Tuesday',
+  'Wednesday',
+  'Thursday',
+  'Friday',
+  'Saturday'
+]
+
+//Function to get the correct integer for the index of the days array
+function CheckDay(day) {
+  if (day + d.getDay() > 6) {
+    return day + d.getDay() - 7
+  } else {
+    return day + d.getDay()
+  }
+}
+
+for (i = 0; i < 7; i++) {
+  document.getElementById('day' + (i + 1)).innerHTML = weekday[CheckDay(i)]
+}

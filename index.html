@@ -12,7 +12,7 @@
     integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-     <!--Unicons-->
+  <!--Unicons-->
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
   <title>Weather App</title>
@@ -23,7 +23,7 @@
   <label for="city">
     <input type="text" id="nameCity">
     <button class="submitCity">Pesquisar cidade</button>
-  </label> 
+  </label>
 
   <div id="container">
     <header>
@@ -35,7 +35,7 @@
         </div>
 
         <div class="header-icon">
-          <img src="./assets/images/Icons Set/sun.svg" alt="">
+          <img id="img" src="./assets/images/Icons Set/sun.svg" alt="">
         </div>
       </div>
 
@@ -59,38 +59,38 @@
 
     <div class="header" id="header">
       <nav class="nav container">
-  
+
         <div class="nav-menu" id="nav-menu">
           <ul class="nav-list grid">
             <li class="nav-item">
-              <a href="#home" class="nav-link active-link">
+              <a href="#" class="nav-link active-link">
                 <i class="uil uil-estate"></i> Home
               </a>
             </li>
-  
+
             <li class="nav-item">
-              <a href="#about" class="nav-link">
+              <a href="#" class="nav-link">
                 <i class="uil uil-search"></i> Search
               </a>
             </li>
-  
+
             <li class="nav-item">
-              <a href="#skills" class="nav-link">
+              <a href="#" class="nav-link">
                 <i class="uil uil-user-location"></i> Location
               </a>
             </li>
-  
+
             <li class="nav-item">
-              <a href="#portfolio" class="nav-link">
+              <a href="#" class="nav-link">
                 <i class="uil uil-heart"></i> Fav
               </a>
             </li>
           </ul>
-  
+
           <i class="uil uil-times nav-close" id="nav-close"></i>
         </div>
-  
-        <div class="nav-btns">  
+
+        <div class="nav-btns">
           <div class="nav-toggle" id="nav-toggle">
             <i class="uil uil-apps"></i>
           </div>
@@ -131,53 +131,53 @@
       <div class="wrapper-week">
         <!--Domingo-->
         <div class="week">
-          <p>Tuesday</p>
+          <p id="day1"></p>
           <img src="./assets/images/sleet.svg" alt="">
-          <p class="temp-min">12°</p>
-          <p class="temp-max">12°</p>
+          <p class="temp-min" id="day1Min">12°</p>
+          <p class="temp-max" id="day1Max">12°</p>
         </div>
         <!--Segunda-->
         <div class="week">
-          <p>Tuesday</p>
+          <p id="day2"></p>
           <img src="./assets/images/sleet.svg" alt="">
-          <p class="temp-min">12°</p>
-          <p class="temp-max">12°</p>
+          <p class="temp-min" id="day2Min">12°</p>
+          <p class="temp-max" id="day2Max">12°</p>
         </div>
         <!--Terça-->
         <div class="week">
-          <p>Tuesday</p>
+          <p id="day3"></p>
           <img src="./assets/images/sleet.svg" alt="">
-          <p class="temp-min">12°</p>
-          <p class="temp-max">12°</p>
+          <p class="temp-min" id="day3Min">12°</p>
+          <p class="temp-max" id="day3Max">12°</p>
         </div>
         <!--Quarta-->
         <div class="week">
-          <p>Tuesday</p>
+          <p id="day4"></p>
           <img src="./assets/images/sleet.svg" alt="">
-          <p class="temp-min">12°</p>
-          <p class="temp-max">12°</p>
+          <p class="temp-min" id="day4Min">12°</p>
+          <p class="temp-max" id="day4Max">12°</p>
         </div>
         <!--Quinta-->
         <div class="week">
-          <p>Tuesday</p>
+          <p id="day5"></p>
           <img src="./assets/images/sleet.svg" alt="">
-          <p class="temp-min">12°</p>
-          <p class="temp-max">12°</p>
+          <p class="temp-min" id="day5Min">12°</p>
+          <p class="temp-max" id="day5Max">12°</p>
         </div>
         <!--Sexta-->
         <div class="week">
-          <p>Tuesday</p>
+          <p id="day6"></p>
           <img src="./assets/images/sleet.svg" alt="">
-          <p class="temp-min">12°</p>
-          <p class="temp-max">12°</p>
+          <p class="temp-min" id="day6Min">12°</p>
+          <p class="temp-max" id="day6Max">12°</p>
         </div>
 
         <!--Sábado-->
         <div class="week">
-          <p>Tuesday</p>
+          <p id="day7"></p>
           <img src="./assets/images/sleet.svg" alt="">
-          <p class="temp-min">12°</p>
-          <p class="temp-max">12°</p>
+          <p class="temp-min" id="day7Min">12°</p>
+          <p class="temp-max" id="day7Max">12°</p>
         </div>
       </div>
     </section>
