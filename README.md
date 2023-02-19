@@ -33,10 +33,18 @@ Esse projeto está sob a licença MIT.
 Projeto desenvolvido por Alysom Crystyam e Vinicius Santos, que teve o intuito de criar um código em conjunto onde foi possível trabalhar e melhorar as habilidades técnicas de Hard Skill e Soft Skill de comunicação, trabalho em equipe e gerenciamento de tempo.
 
 Acompanhe os nossos perfis:
-💻  [Github - Alysom Crystyam ](https://github.com/alysomCRY)
-🌐 [Linkedin - Alysom Crystyam](https://www.linkedin.com/in/alysom-crystyam-328a51254/)
 
-💻  [Github - Vinicius Oliveira ](https://github.com/ViniciusOliver-stack)
-🌐 [Linkedin - Vinicius Santos](https://www.linkedin.com/in/viniciussantos-oliveira/)
+<p> 💻  [Github - Alysom Crystyam ](https://github.com/alysomCRY) </p>
+
+<p> 🌐 [Linkedin - Alysom Crystyam](https://www.linkedin.com/in/alysom-crystyam-328a51254/) </p>
+
+<p> 💻  [Github - Vinicius Oliveira ](https://github.com/ViniciusOliver-stack) </p>
+
+<p> 🌐 [Linkedin - Vinicius Santos](https://www.linkedin.com/in/viniciussantos-oliveira/) </p>
+
+
+
+
+
 
 
