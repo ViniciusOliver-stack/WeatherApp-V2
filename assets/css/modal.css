@@ -12,7 +12,7 @@
   transition: opacity 1s, visibility 0s linear 1s, transform 1s;
   transform: translateY(100%);
 }
-.modal .transition {
+.transition {
   opacity: 1;
   visibility: visible;
   transition-delay: 5s;
