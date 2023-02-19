@@ -1,6 +1,7 @@
 @import url(./reset.css);
 @import url(./header.css);
-
+@import url(./section-hours.css);
+@import url(./section-today.css);
 #container{
   padding: 2rem;
 }
