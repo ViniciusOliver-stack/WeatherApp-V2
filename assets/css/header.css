@@ -4,12 +4,8 @@
 }
 
 .city{
-  font-size: 2rem;
+  font-size: clamp(2rem, 5vw, 2.5rem);
   font-weight: 500;
-  
-  width: fit-content;
-  border-bottom: 2px solid #f1f1f1;
-  padding-bottom: .6rem;
 }
 
 #temp{
@@ -29,6 +25,8 @@
   border-radius: 50px;
   text-transform: capitalize;
   padding: 1rem 1.3rem;
+
+  margin-top: 1.5rem;
 }
 
 .header-icon{
@@ -54,4 +52,8 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+}
+
+.weather-info p{
+  font-size: clamp(1.2rem, 5vw, 2rem);
 }

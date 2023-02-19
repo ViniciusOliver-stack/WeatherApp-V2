@@ -144,13 +144,13 @@ btnSubmitCity.addEventListener('click', async () => {
 //Getting and displaying the text for the upcoming five days of the week
 var d = new Date()
 var weekday = [
-  'Sunday',
-  'Monday',
-  'Tuesday',
-  'Wednesday',
-  'Thursday',
-  'Friday',
-  'Saturday'
+  'Domingo',
+  'Segunda',
+  'Terça',
+  'Quarta',
+  'Quinta',
+  'Sexta',
+  'Sábado'
 ]
 
 //Function to get the correct integer for the index of the days array
@@ -164,4 +164,26 @@ function CheckDay(day) {
 
 for (i = 0; i < 7; i++) {
   document.getElementById('day' + (i + 1)).innerHTML = weekday[CheckDay(i)]
+}
+
+
+// Get the modal
+const modal = document.querySelector("#search");
+const btn = document.querySelector("#searchBtn");
+const btnSearch = document.querySelector('#submitCity')
+const span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 }
