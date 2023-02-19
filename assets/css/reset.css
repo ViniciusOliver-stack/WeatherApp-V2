@@ -12,11 +12,13 @@
 
   text-decoration: none;
   list-style: none;
+
+  scrollbar-width: thin;
+  scrollbar-color: transparent;
 }
 
 html{
   scroll-snap-type: y mandatory;
-
 }
 
 :root{
@@ -29,10 +31,6 @@ body{
   scroll-snap-type: y mandatory;
 }
 
-* {
-  scrollbar-width: thin;
-  scrollbar-color: transparent;
-}
 
 /* Works on Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
