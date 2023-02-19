@@ -38,6 +38,7 @@ Acompanhe os nossos perfis:
 </br>
 🌐 [Linkedin - Alysom Crystyam](https://www.linkedin.com/in/alysom-crystyam-328a51254/)
 </br>
+</br>
 💻  [Github - Vinicius Oliveira ](https://github.com/ViniciusOliver-stack)
 </br>
 🌐 [Linkedin - Vinicius Santos](https://www.linkedin.com/in/viniciussantos-oliveira/)
