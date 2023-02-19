@@ -5,6 +5,10 @@
     margin: 0 auto;
   }
 
+  .modal-content{
+    width: 60% !important;
+  }
+
   .footer{
     width: 60% !important;
 
