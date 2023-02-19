@@ -1,0 +1,38 @@
+.wrapper-sunrise-sunset {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper-hours {
+  margin-top: 6rem;
+
+  position: relative;
+}
+
+.wrapper-sunrise,
+.wrapper-sunset {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.wrapper-sunrise p,
+.wrapper-sunset p {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.wrapper-sunset {
+  position: absolute;
+  bottom: 2.6rem;
+  right: 0;
+}
+
+.wrapper-sunrise img,
+.wrapper-sunset img{
+  width: 24px;
+}
+
+.time-line{
+  margin-top: 1rem;
+}

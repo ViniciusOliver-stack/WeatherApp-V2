@@ -25,13 +25,16 @@
       <div class="wrapper-weather">
         <div class="header-info">
           <h2 class="city">San Francisco</h2>
-          <p class="temperature">24°C</p>
-          <p class="climate">Cloudy</p>
+          <div id="temp">
+            <p class="temperature">24°C</p>
+            <p class="climate">Cloudy</p>
+          </div>
+
+          <div class="header-icon">
+            <img id="img" src="./assets/images/Icons Set/sun.svg" alt="" />
+          </div>
         </div>
 
-        <div class="header-icon">
-          <img id="img" src="./assets/images/Icons Set/sun.svg" alt="" />
-        </div>
       </div>
 
       <div class="header-bottom">
@@ -198,9 +201,9 @@
     <div id="search" class="modal">
       <div class="modal__content">
         <h1>Search City</h1>
-        
+
         <label for="city">
-          <input type="text" id="nameCity" placeholder="Enter city name"/>
+          <input type="text" id="nameCity" placeholder="Enter city name" />
           <button class="submitCity">Pesquisar cidade</button>
         </label>
 
