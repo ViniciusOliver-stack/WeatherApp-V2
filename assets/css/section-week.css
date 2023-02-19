@@ -1,0 +1,31 @@
+.wrapper-week {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.3rem;
+
+  margin-top: 3rem;
+  padding-bottom: 4rem;
+}
+
+.week {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.week p,
+.today-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.week p:nth-child(2){
+  border: 1px solid red;
+  
+}
+
+.temp-max,
+.today-title {
+  color: #59569d;
+}
