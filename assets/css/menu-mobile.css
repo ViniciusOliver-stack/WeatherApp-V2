@@ -1,7 +1,7 @@
-
 footer {
   height: 40px;
   width: 100%;
+  border-radius: 10px 10px 0 0;
 
   position: fixed;
   left: 0;
@@ -10,11 +10,9 @@ footer {
   display: flex;
 
   background-color: #59569d;
-
-  
 }
 
-.footer ul{
+.footer ul {
   width: 100%;
 
   display: flex;
@@ -22,9 +20,7 @@ footer {
   justify-content: space-around;
 }
 
-
 .footer i {
   color: #f1f1f1;
   font-size: 2rem;
 }
-

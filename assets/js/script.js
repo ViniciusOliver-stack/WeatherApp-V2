@@ -6,41 +6,16 @@ const climate = document.querySelector('.climate')
 const humidity = document.querySelector('.humidity')
 const pressure = document.querySelector('.pressure')
 const windSpeed = document.querySelector('.wind-speed')
-
 const sunrise = document.querySelector('.sunrise')
 const sunset = document.querySelector('.sunset')
-
 const btnSubmitCity = document.querySelector('.submitCity')
-
-const navMenu = document.querySelector('#nav-menu')
-const navToggle = document.querySelector('#nav-toggle')
-const navClose = document.querySelector('#nav-close')
-
-if (navToggle) {
-  navToggle.addEventListener('click', () => {
-    navMenu.classList.add('show-menu')
-  })
-}
-
-if (navClose) {
-  navClose.addEventListener('click', () => {
-    navMenu.classList.remove('show-menu')
-  })
-}
-
-/*Remove menu mobile*/
-const navLink = document.querySelectorAll('.nav-link')
-
-function actionLink() {
-  const navMenu = document.querySelector('.nav-menu')
-
-  navMenu.classList.remove('show-menu')
-}
-
-navLink.forEach(n => n.addEventListener('click', actionLink))
 
 btnSubmitCity.addEventListener('click', async () => {
   const nameCity = document.querySelector('#nameCity').value
+
+  if (nameCity === '') {
+    return
+  }
 
   function converterParaHora(segundos) {
     function duasCasas(numero) {
@@ -61,13 +36,24 @@ btnSubmitCity.addEventListener('click', async () => {
 
     return value
   }
+
   //Get data all application
   await fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${nameCity}&units=metric&lang=pt_br&appid=${APIKey}`
   )
     .then(data => data.json())
     .then(resp => {
-      console.log(resp)
+      if (resp.cod === '404') {
+        city.textContent = 'Cidade não encontrada'
+        temperature.textContent = '---'
+        humidity.textContent = `---`
+        pressure.textContent = `---`
+        windSpeed.textContent = `---`
+        climate.textContent = `---`
+
+        return
+      }
+
       city.textContent = `${resp.name}`
       temperature.textContent = converterParaInteiro(resp.main.temp) + `°C`
       humidity.textContent = `${resp.main.humidity}%`
@@ -166,31 +152,29 @@ for (i = 0; i < 7; i++) {
   document.getElementById('day' + (i + 1)).innerHTML = weekday[CheckDay(i)]
 }
 
-
 // Get the modal
-const modal = document.querySelector("#search");
-const btn = document.querySelector("#searchBtn");
-const btnSearch = document.querySelector('.submitCity');
-const span = document.getElementsByClassName("close")[0];
-const inputSearch = document.querySelector(".inputSearch");
+const modal = document.querySelector('#search')
+const btn = document.querySelector('#searchBtn')
+const btnSearch = document.querySelector('.submitCity')
+const span = document.getElementsByClassName('close')[0]
+const inputSearch = document.querySelector('.inputSearch')
+const uilSearch = document.querySelector('#uilSearch')
 
-
-
-
-btn.onclick = function() {
-  modal.style.display = "block";
+btn.onclick = function () {
+  modal.style.display = 'block'
+  modal.classList.add('transition')
 }
-btnSearch.addEventListener("click", function(){
-  modal.style.display = "none";
-  inputSearch.value = "";
-});
-span.onclick = function() {
-  modal.style.display = "none";
+btnSearch.addEventListener('click', function () {
+  modal.style.display = 'none'
+  inputSearch.value = ''
+})
+span.onclick = function () {
+  modal.style.display = 'none'
 }
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (event.target == modal) {
-    modal.style.display = "none";
+    modal.style.display = 'none'
   }
 }
