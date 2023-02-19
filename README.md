@@ -34,13 +34,13 @@ Projeto desenvolvido por Alysom Crystyam e Vinicius Santos, que teve o intuito d
 
 Acompanhe os nossos perfis:
 
-<p> 💻  [Github - Alysom Crystyam ](https://github.com/alysomCRY) </p>
-
-<p> 🌐 [Linkedin - Alysom Crystyam](https://www.linkedin.com/in/alysom-crystyam-328a51254/) </p>
-
-<p> 💻  [Github - Vinicius Oliveira ](https://github.com/ViniciusOliver-stack) </p>
-
-<p> 🌐 [Linkedin - Vinicius Santos](https://www.linkedin.com/in/viniciussantos-oliveira/) </p>
+💻  [Github - Alysom Crystyam ](https://github.com/alysomCRY)
+</br>
+🌐 [Linkedin - Alysom Crystyam](https://www.linkedin.com/in/alysom-crystyam-328a51254/)
+</br>
+💻  [Github - Vinicius Oliveira ](https://github.com/ViniciusOliver-stack)
+</br>
+🌐 [Linkedin - Vinicius Santos](https://www.linkedin.com/in/viniciussantos-oliveira/)
 
 
 
