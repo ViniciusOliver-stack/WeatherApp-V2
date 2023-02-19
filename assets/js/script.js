@@ -173,12 +173,12 @@ const btn = document.querySelector("#searchBtn");
 const btnSearch = document.querySelector('.submitCity');
 const span = document.getElementsByClassName("close")[0];
 const inputSearch = document.querySelector(".inputSearch");
-const uilSearch = document.querySelector("#uilSearch");
+
+
 
 
 btn.onclick = function() {
   modal.style.display = "block";
-  modal.classList.add("transition");
 }
 btnSearch.addEventListener("click", function(){
   modal.style.display = "none";
