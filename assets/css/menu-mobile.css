@@ -4,4 +4,10 @@
     justify-content: space-around;
     background-color: #59569D;
     width: 100%;
+    padding: 0.5rem 0.5rem;
+    transition: 1s;
+    
+}
+footer .footer  li i {
+    cursor: pointer;
 }
