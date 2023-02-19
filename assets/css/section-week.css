@@ -20,11 +20,6 @@
   font-weight: 600;
 }
 
-.week p:nth-child(2){
-  border: 1px solid red;
-  
-}
-
 .temp-max,
 .today-title {
   color: #59569d;

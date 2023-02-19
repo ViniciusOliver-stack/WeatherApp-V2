@@ -1,7 +1,28 @@
-.footer {
-    position: absolute;
-    display: flex;
-    justify-content: space-around;
-    background-color: #59569D;
-    width: 100%;
+footer {
+  height: 40px;
+  width: 100%;
+
+  position: fixed;
+  left: 0;
+  bottom: 0;
+
+  display: flex;
+
+  background-color: #59569d;
+
+  border-radius: 10px 10px 0 0;
+}
+
+.footer ul{
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+.footer i {
+  color: #f1f1f1;
+  font-size: 2rem;
 }

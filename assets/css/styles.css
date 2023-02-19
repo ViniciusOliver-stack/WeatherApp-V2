@@ -4,6 +4,7 @@
 @import url(./section-today.css);
 @import url(./section-week.css);
 @import url(./media-queries.css);
+@import url(./modal.css);
 #container{
   padding: 2rem;
 }

@@ -27,7 +27,7 @@
           <h2 class="city">San Francisco</h2>
           <div id="temp">
             <p class="temperature">24°C</p>
-            <p class="climate">Cloudy</p>
+            <p class="climate">Algumas Nuvens</p>
           </div>
 
           <div class="header-icon">
@@ -54,46 +54,6 @@
         </div>
       </div>
     </header>
-
-    <div class="header" id="header">
-      <nav class="nav container">
-        <div class="nav-menu" id="nav-menu">
-          <ul class="nav-list grid">
-            <li class="nav-item">
-              <a href="#" class="nav-link active-link">
-                <i class="uil uil-estate"></i> Home
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="#search" class="nav-link">
-                <i class="uil uil-search"></i> Search
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="uil uil-user-location"></i> Location
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="uil uil-heart"></i> Fav
-              </a>
-            </li>
-          </ul>
-
-          <i class="uil uil-times nav-close" id="nav-close"></i>
-        </div>
-
-        <div class="nav-btns">
-          <div class="nav-toggle" id="nav-toggle">
-            <i class="uil uil-apps"></i>
-          </div>
-        </div>
-      </nav>
-    </div>
 
     <section>
       <div class="wrapper-hours">
@@ -189,37 +149,39 @@
         </div>
       </div>
     </section>
-
-    <!--Modal-->
-    <div id="search" class="modal">
-      <div class="modal__content">
-        <h1>Search City</h1>
-
-        <label for="city">
-          <input type="text" id="nameCity" placeholder="Enter city name" />
-          <button class="submitCity">Pesquisar cidade</button>
-        </label>
-
-        <a href="#" class="modal__close">&times;</a>
-      </div>
-    </div>
   </div>
-  <footer>
-    <ul class="footer">
-      <li><a href="#"></a>
-        <i class="uil uil-estate"></i> 
-      </li>
-      <li><a href="#"></a>
+
+  <footer class="footer">
+    <ul>
+      <li><a href="#">
+        <i class="uil uil-estate"></i>
+      </a></li>
+      <li><a id="searchBtn" href="#search">
         <i class="uil uil-search"></i>
-      </li>
-      <li><a href="#"></a>
-        <i class="uil uil-user-location"></i>
-      </li>
-      <li><a href="#"></a>
-        <i class="uil uil-heart"></i>
-      </li>
+      </a></li>
+      <li><a href="#">
+        <i class="uil uil-compass"></i>
+      </a></li>
+      <li><a href="#">
+        <i class="uil uil-heart-alt"></i>
+      </a></li>
     </ul>
   </footer>
+
+  <!--Modal-->
+  <div id="search" class="modal">
+    <div class="modal-content">
+
+      <h1>Search City</h1>
+
+      <span class="close">&times;</span>
+      <label for="city">
+        <input type="text" id="nameCity" placeholder="Enter city name" autocomplete="off"/>
+        <button class="submitCity">Pesquisar cidade</button>
+      </label> 
+    </div>
+  </div>
+  
 
   <script src="./assets/js/script.js"></script>
 </body>
