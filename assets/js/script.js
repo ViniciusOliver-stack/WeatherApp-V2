@@ -128,8 +128,8 @@ btnSubmitCity.addEventListener('click', async () => {
 })
 
 //Getting and displaying the text for the upcoming five days of the week
-var d = new Date()
-var weekday = [
+let d = new Date()
+let weekday = [
   'Domingo',
   'Segunda',
   'Terça',
