@@ -152,7 +152,6 @@ for (i = 0; i < 7; i++) {
   document.getElementById('day' + (i + 1)).innerHTML = weekday[CheckDay(i)]
 }
 
-// Get the modal
 const modal = document.querySelector('#search')
 const btn = document.querySelector('#searchBtn')
 const btnSearch = document.querySelector('.submitCity')
@@ -172,7 +171,6 @@ span.onclick = function () {
   modal.style.display = 'none'
 }
 
-// When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = 'none'
